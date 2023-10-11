@@ -1,11 +1,11 @@
 /*eslint linebreak-style: ["error", "windows"]*/
-const assertEqual = function(actual, expected) {
+// assertEqual can only compare primitive values, not complex data types like arrays or objects.
+const assertEqual = function (actual, expected) {
   if (actual === expected) {
-    console.log("Assertion passed: [" + actual + "] === [" + expected + "]");
+    console.log(`✅Assertion passed: [${ actual }] === [ ${ expected }]`);
   } else {
-    console.log("Assertion failed: [" + actual + "] !== [" + expected + "]");
+    console.log(`🛑Assertion failed: [${actual}] !== [ ${expected}]`);
   }
 };
 
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+module.exports = assertEqual;
